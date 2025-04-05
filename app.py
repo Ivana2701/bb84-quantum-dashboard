@@ -149,7 +149,7 @@ with tab1:
         })
         st.subheader("Visual Bit Flow (Alice → Eve → Bob)")
         flow_df = create_bit_flow_table(result, eve_enabled)
-        st.dataframe(flow_df.style.applymap(
+        st.dataframe(flow_df.style.map(
             lambda val: 'background-color: #d4edda' if val == '✅'
             else 'background-color: #f8d7da' if val == '❌'
             else 'background-color: #f0f0f0' if val == '⚠️'
