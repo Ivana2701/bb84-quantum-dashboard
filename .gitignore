@@ -1,0 +1,40 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# Virtual environments
+env/
+venv/
+.bb84_env/
+.venv/
+*.egg-info/
+pip-wheel-metadata/
+
+# macOS & IDE
+.DS_Store
+.vscode/
+.idea/
+
+# Python dependency logs
+*.log
+
+# Streamlit specific
+.streamlit/
+
+# Jupyter notebooks checkpoints (if used)
+.ipynb_checkpoints/
+
+# VSCode Python interpreter
+.python-version
+
+# Streamlit Cloud secrets (if you add any)
+.secrets.toml
+
+# Conda environment files
+*.conda
+*.lock
+*.yaml
