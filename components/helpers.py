@@ -2,6 +2,8 @@ import random
 import pandas as pd
 from qiskit import QuantumCircuit
 from qiskit_aer.primitives import SamplerV2
+# from qiskit.primitives.sampler import Sampler
+
 
 def sample_bit(qc: QuantumCircuit) -> int:
     sampler = SamplerV2()
