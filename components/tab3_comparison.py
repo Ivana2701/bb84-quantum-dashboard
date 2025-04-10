@@ -4,9 +4,11 @@ from qiskit import QuantumCircuit, transpile
 from qiskit_aer import AerSimulator
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import serialization, hashes
-
 import pandas as pd
 import numpy as np
+
+# Import the missing function from helpers
+from components.helpers import create_bit_flow_table
 
 def render_tab3():
     st.header("📊 Quantum vs Classical Comparison")

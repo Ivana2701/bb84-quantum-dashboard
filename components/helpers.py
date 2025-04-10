@@ -9,7 +9,7 @@ def sample_bit(qc: QuantumCircuit) -> int:
     sampler = SamplerV2()
     job = sampler.run([qc], shots=1)
     result = job.result()
-    counts = result[0].data.c0.get_counts()
+    counts = result[0].data['c'].get_counts()
     return int(list(counts.keys())[0])
 
 def bb84_simulation(n=20, eve_enabled=False):
