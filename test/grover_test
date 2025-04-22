@@ -1,0 +1,13 @@
+from qiskit_algorithms import Grover, AmplificationProblem
+from qiskit import QuantumCircuit
+from qiskit.primitives.sampler import Sampler
+
+# Define a 2-qubit oracle for "11"
+oracle = QuantumCircuit(2)
+oracle.cz(0, 1)
+oracle.name = "Oracle"
+
+problem = AmplificationProblem(oracle=oracle, is_good_state="11")
+grover = Grover()
+result = grover.amplify(problem)
+print("Result:", result.assignment)
