@@ -11,7 +11,10 @@ def deutsch_jozsa_oracle(case='constant'):
     if case == 'balanced':
         oracle.cx(0, 1)  # f(x) = x
     elif case == 'constant':
-        oracle.i(0)  # f(x) = 0 (or you can flip with X for f(x)=1)
+    #     oracle.i(0)  # f(x) = 0 (or you can flip with X for f(x)=1)
+    # For f(x) = 0, do nothing (identity)
+        # Optionally, for f(x) = 1, apply X gate: oracle.x(1)
+        pass
     return oracle
 
 

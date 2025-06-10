@@ -9,8 +9,12 @@ def sample_bit(qc: QuantumCircuit) -> int:
     sampler = SamplerV2()
     job = sampler.run([qc], shots=1)
     result = job.result()
-    counts = result[0].data['c'].get_counts()
-    return int(list(counts.keys())[0])
+
+    counts = result[0].data.c.get_counts()
+    bitstring = max(counts, key=counts.get)
+
+    return int(bitstring, 2)
+
 
 def bb84_simulation(n=20, eve_enabled=False):
     alice_bits = [random.randint(0, 1) for _ in range(n)]
