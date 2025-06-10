@@ -1,0 +1,23 @@
+name: bb84_Q
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - qiskit=1.0.2
+  - qiskit-aer=0.14.1
+  - qiskit-ibm-runtime=0.22.0
+  - qiskit-ibm-provider=0.7.2
+  - qiskit-machine-learning=0.7.2
+  - cryptography=41.0.5
+  - streamlit=1.33.0
+  - matplotlib=3.8.3
+  - pandas=2.2.2
+  - numpy=1.26.4
+  - scikit-learn=1.4.2
+  - python-dotenv=1.0.1
+  - psycopg2=2.9.9
+  - sqlalchemy=2.0.30
+  - requests=2.32.3
+  - pylatexenc=2.10
+  - pip:
+      - imbalanced-learn==0.12.2
